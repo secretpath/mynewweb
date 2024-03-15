@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="submit.html">
+      <table style="text-align: left">
+        <tr>
+          <th><label for="">Enter Name</label></th>
+          <th><input type="text" placeholder="Your Name" required/></th>
+        </tr>
+        <tr>
+          <th><label for="">Enter E-mail</label></th>
+          <th><input type="email" placeholder="Your E-mail" value="raaj@gmail.com"/></th>
+        </tr>
+        <tr>
+          <th><label for="">Enter Mob. No.</label></th>
+          <th><input type="number" placeholder="Your  Mob. No." readonly/></th>
+        </tr>
+        <tr>
+          <th><label for="">Enter Password</label></th>
+          <th><input type="password" placeholder="Your Password" disabled/></th>
+        </tr>
+        <tr>
+          <th><label for="">Enter Date of Birth</label></th>
+          <th>
+            <input
+              type="date"
+              placeholder="Your D.O.B"
+              onfocus="this.showPicker()"
+            />
+          </th>
+        </tr>
+        <tr>
+          <th><label for="">Enter Exam Date & Time</label></th>
+          <th>
+            <input
+              type="datetime-local"
+              placeholder="Your Exam Date & Time"
+              onfocus="this.showPicker()"
+            />
+          </th>
+        </tr>
+        <tr>
+          <th><label for="">Enter Color</label></th>
+          <th><input type="color" /></th>
+        </tr>
+        <tr>
+          <th>Select Gender</th>
+          <th>
+            <input type="radio" name="gender" class="hello" id="" data-ganesh="123"/>Male
+            <input type="radio" name="gender" checked />Female
+          </th>
+        </tr>
+        <tr>
+          <th>Select Qualification</th>
+          <th>
+            <select name="" id="">
+              <option value="">Select Qualification</option>
+              <option value="0">Under 10</option>
+              <option value="1">Matric</option>
+              <option value="2" selected>Graduate</option>
+              <option value="3">Above Graduate</option>
+            </select>
+          </th>
+        </tr>
+
+        <tr>
+          <th colspan="2">Enter Your Message</th>
+        </tr>
+        <tr>
+          <th colspan="2">
+            <textarea name="" id="" cols="50" rows="3"></textarea>
+          </th>
+        </tr>
+
+        <tr>
+          <th colspan="2">
+            <input type="checkbox" /> I have read the information Carefully.
+          </th>
+        </tr>
+      </table>
+      <!-- <input type="button" value="Submit Data"> -->
+      <button type="submit">Save Data</button>
+    <button type="reset">Reset Data</button>
+    <button type="button">Normal Button</button>
+    </form>
+
+    *Note:- Multiple elements can have same class
+    but id must be unique
+
+  
+    
+  </body>
+</html>

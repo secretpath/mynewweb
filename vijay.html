@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="conainer">
+        <div class="add" id="add">
+            <h2>Add Notes</h2>
+        </div>
+        <div class="note" id="note">
+
+        </div>
+           
+            <div class="form" id="form">
+                <div class="top">
+                    <h2 class="head">Add Notes</h2>
+                    <p id="p">X</p>
+                </div>
+                
+                <p class="form1">Titele</p>
+                <input type="text" id="titele" name="name">
+                <p class="form1">Discription</p>
+                <textarea name="" id="dis" cols="30" rows="5"></textarea>
+                <button id="btn">Add Note</button>
+            </div>
+
+       
+    </div>
+    <script>
+        let add = document.getElementById("add");
+        let del = document.getElementById("p")
+        let btn = document.getElementById("btn")
+
+
+        add.addEventListener("click", function(){
+            document.getElementById("form").style.display="block"
+            document.getElementById("titele").value="";
+            document.getElementById("dis").value="";
+        });
+
+        del.addEventListener("click", function(){
+            document.getElementById("form").style.display="none"
+        });
+
+       btn.addEventListener("click",function(){
+        let div = document.createElement("div");
+        div.classList.add("mynote")
+
+         div.innerHTML=
+
+         `
+            <h2>${document.getElementById("titele").value}</h2>
+            <p>${document.getElementById("dis").value}</p>
+            <button>del</button>
+         `
+         
+         document.getElementById("note").appendChild(div);
+         document.querySelector("button").addEventListener("click", function(){
+            div.remove();
+         })
+       })
+    </script>
+
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding: 45px;
+}
+
+
+.add {
+
+    background-color: rgb(248, 127, 157);
+    font-size: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 100px;
+    padding: 20px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.head{
+    margin-left: 30%;
+}
+.top p{
+    margin-right: -10px;
+    margin-top: -15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#btn{
+    width: 85%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin: 40px 0px;
+    background-color: rgb(56, 135, 253);
+    cursor: pointer;
+    font-weight: 900;
+}
+#titele,#dis{
+    width: 80%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+
+}
+.form1 {
+    font-weight: 900;
+    margin-top: 20px;
+}
+
+.form{
+    width: 300px;
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    top: 5%;
+   text-align: center;
+    background-color: rgb(249, 98, 123);
+    padding: 5px;
+    display: none;
+}
+
+.note{
+    display: flex;
+    gap: 20px;
+    justify-content: start;
+   flex-wrap: wrap;
+   text-align: center;
+    
+}
+.mynote{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    
+    text-align: center;
+    background-color: rgb(58, 116, 249);
+    padding: 20px;
+  
+}
+.mynote button{
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+    </style>
+        
+    </body>
